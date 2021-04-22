@@ -24,9 +24,10 @@ class pre(db.Model):
     rfile = db.Column(db.String(1))
     tag = db.Column(db.String(198))
     version = db.Column(db.String(20))
-    plabel = db.Column(db.Text(264207))
+    plabel = db.Column(db.Text())
     negating = db.Column(db.Integer)
 
+# check values!!!!!!
 class sub(db.Model):
     adsh = db.Column(db.String(20))
     cik = db.Column(db.Integer)
@@ -65,5 +66,13 @@ class sub(db.Model):
     nciks = db.Column(db.Integer)
     aciks = db.Column(db.Float())
 
-            tag
-                tag	version	custom	abstract	datatype	iord	crdr	tlabel	doc
+class tag(db.Model):
+    tag = db.Column(db.String(200))
+    version = db.Column(db.String(20))
+    custom = db.Column(db.Integer)
+    abstract = db.Column(db.Integer)
+    datatype = db.Column(db.String(20))
+    iord = db.Column(db.Float())
+    crdr = db.Column(db.Float())
+    tlabel = = db.Column(db.Text())
+    doc = db.Column(db.Float())
